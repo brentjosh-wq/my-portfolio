@@ -828,3 +828,540 @@ body {
         transform: scale(1);
     }
 }
+
+.navbar {
+    transition: transform 0.4s ease-in-out;
+}
+
+.navbar.nav-hidden {
+    transform: translateY(-100%);
+}
+
+
+@media screen and (max-width: 900px) {
+
+   
+    .navbar {
+        padding: 18px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .intro {
+        font-size: 30px;
+        margin-left: 5%;
+        margin-top: 100px;
+    }
+
+    .shortp {
+        font-size: 17px;
+        margin-left: 5%;
+        max-width: 48%;
+        line-height: 1.6;
+    }
+
+    .profile-image {
+        width: 350px;
+        height: 350px;
+        margin-right: 4%;
+        margin-top: -300px;
+    }
+
+    .hire-btn {
+        margin-left: 5%;
+    }
+
+
+    .abouthead {
+        margin-left: 0;
+        text-align: center;
+        top: 0;
+        margin-top: 80px;
+    }
+
+    .about {
+        width: 90%;
+        min-height: auto;
+        margin: 40px auto;
+        padding: 30px;
+        display: grid;
+        grid-template-columns: 1fr 0.8fr;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .aboutp {
+        font-size: 17px;
+        margin: 0;
+    }
+
+    .aboutp br {
+        display: none;
+    }
+
+    .about-image {
+        width: 100%;
+        height: auto;
+        max-height: 350px;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    /* SKILLS */
+    .skills-track {
+        gap: 40px;
+    }
+
+    .skills-track img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .skills-section .skills-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    /* PROJECTS */
+    .projects-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+
+    /* NAVIGATION */
+    .navbar {
+        padding: 15px 5%;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+   
+    .intro {
+        font-size: 27px;
+        line-height: 1.4;
+        margin: 50px auto 20px;
+        width: 90%;
+        text-align: center;
+    }
+
+    .shortp {
+        width: 90%;
+        max-width: none;
+        margin: 0 auto;
+        font-size: 15px;
+        line-height: 1.7;
+        text-align: center;
+    }
+
+    .hire-btn {
+        display: block;
+        width: fit-content;
+        margin: 25px auto;
+    }
+
+    .profile-image {
+        width: min(75vw, 280px);
+        height: auto;
+        aspect-ratio: 1 / 1;
+        margin: 25px auto 50px;
+    }
+
+    .abouthead {
+        font-size: 27px;
+        margin: 30px auto 20px;
+        top: 0;
+        text-align: center;
+    }
+
+    .about {
+        width: 90%;
+        margin: 20px auto 50px;
+        padding: 25px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        border-radius: 22px;
+    }
+
+    .aboutp {
+        font-size: 15px;
+        line-height: 1.8;
+        margin: 0;
+        text-align: center;
+    }
+
+    .aboutp br {
+        display: none;
+    }
+
+    .hi {
+        font-size: 40px;
+    }
+
+    .about-image {
+        width: min(100%, 260px);
+        height: auto;
+        max-height: 280px;
+        margin: 0 auto;
+        object-fit: contain;
+    }
+
+    .skills {
+        margin-top: 50px;
+    }
+
+    .skills h1 {
+        font-size: 27px;
+    }
+
+    .skills-track {
+        gap: 30px;
+    }
+
+    .skills-track img {
+        width: 65px;
+        height: 65px;
+    }
+
+        padding: 45px 5%;
+    }
+
+    .skills-section .skills-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .skill-card {
+        padding: 20px 12px;
+    }
+
+    .skill-card img {
+        max-width: 65px;
+    }
+
+    .projects-section {
+        padding: 45px 5%;
+    }
+
+    .projects-header h2 {
+        font-size: 29px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .project-content {
+        padding: 20px;
+    }
+
+    .project-content p {
+        min-height: auto;
+    }
+
+    .project-buttons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+  
+    .contact-section {
+        padding: 45px 5%;
+    }
+
+    .contact-header h2 {
+        font-size: 29px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        padding: 0;
+    }
+
+    .contact-form {
+        padding: 22px 16px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-card {
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .contact-card p {
+        overflow-wrap: anywhere;
+    }
+
+    
+    .popup-card {
+        width: 90%;
+        max-width: 350px;
+        padding: 25px 18px;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .navbar {
+        padding: 12px 3%;
+    }
+
+    .nav-links {
+        gap: 10px 14px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .intro {
+        font-size: 24px;
+    }
+
+    .shortp {
+        font-size: 14px;
+    }
+
+    .profile-image {
+        width: 230px;
+    }
+
+    .about {
+        width: 92%;
+        padding: 22px 15px;
+    }
+
+    .aboutp {
+        font-size: 14px;
+    }
+
+    .skills-section .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-header h2,
+    .contact-header h2 {
+        font-size: 26px;
+    }
+
+    .contact-form {
+        padding: 18px 12px;
+    }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
+    .intro {
+        font-size: 30px;
+        line-height: 1.4;
+        max-width: 55%;
+        margin-top: 110px;
+        margin-left: 5%;
+    }
+
+    .shortp {
+        font-size: 17px;
+        line-height: 1.7;
+        max-width: 50%;
+        margin-top: 35px;
+        margin-left: 5%;
+    }
+
+    .hire-btn {
+        display: inline-block;
+        margin-top: 45px;
+        margin-left: 5%;
+    }
+
+    .profile-image {
+        position: absolute;
+        top: 330px;
+        right: 5%;
+        width: 34%;
+        max-width: 320px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        margin: 0;
+    }
+
+    .abouthead {
+        margin-top: 100px;
+        margin-left: 0;
+        text-align: center;
+        position: static;
+    }
+
+    .about {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    .about-image {
+        max-width: 40%;
+        height: auto;
+        margin: 20px auto;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+
+    .intro {
+        font-size: 35px;
+        line-height: 1.4;
+        max-width: 60%;
+        margin-top: 120px;
+        margin-left: 8%;
+    }
+
+    .shortp {
+        font-size: 19px;
+        line-height: 1.8;
+        max-width: 48%;
+        margin-top: 35px;
+        margin-left: 8%;
+    }
+
+    .hire-btn {
+        display: inline-block;
+        margin-top: 45px;
+        margin-left: 8%;
+    }
+
+    .profile-image {
+        width: clamp(350px, 35vw, 450px);
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        margin-left: auto;
+        margin-right: 7%;
+        margin-top: -350px;
+    }
+
+    .abouthead {
+        text-align: center;
+        margin-left: 0;
+        position: static;
+        margin-top: 150px;
+    }
+
+    .about {
+        width: 85%;
+        margin: 30px auto;
+    }
+}
+
+
+@media screen and (min-width: 1025px) {
+    .projects-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+    /* Contact */
+    .contact-container {
+        grid-template-columns: 1fr 1.3fr;
+    }
+
+    /* TABLET AND DESKTOP CONTACT LAYOUT */
+@media screen and (min-width: 601px) {
+
+    .contact-container {
+        display: grid !important;
+        grid-template-columns: 1fr 1.3fr;
+        align-items: start;
+        gap: 30px;
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        min-width: 0;
+    }
+
+}
+
+/* PHONE - KEEP VERTICAL LAYOUT */
+@media screen and (max-width: 600px) {
+    .contact-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+

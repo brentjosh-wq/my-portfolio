@@ -95,12 +95,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const sendBtn = contactForm.querySelector(".send-btn");
 
-    // Initialize EmailJS
+
     emailjs.init({
         publicKey: "h3FXlu1H91xzcH6Hr"
     });
 
-    // Send message
+
     contactForm.addEventListener("submit", function(event) {
 
         event.preventDefault();
@@ -118,10 +118,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
             console.log("SUCCESS!", response.status);
 
-            // Reset form after successful sending
             contactForm.reset();
 
-            // Show your existing popup animation
+           
             successPopup.classList.add("active");
 
         })
@@ -143,12 +142,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    // Close popup button
+
     closePopup.addEventListener("click", function() {
         successPopup.classList.remove("active");
     });
 
-    // Close popup when clicking outside
+
     successPopup.addEventListener("click", function(event) {
 
         if (event.target === successPopup) {
@@ -156,6 +155,34 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
     });
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const navbar = document.querySelector(".navbar");
+
+    if (!navbar) return;
+
+    let lastScroll = 0;
+
+    window.addEventListener("scroll", function () {
+
+        let currentScroll = window.scrollY;
+
+        if (currentScroll <= 50) {
+            navbar.classList.remove("nav-hidden");
+        }
+        else if (currentScroll > lastScroll) {
+            navbar.classList.add("nav-hidden");
+        }
+        else if (currentScroll < lastScroll) {
+            navbar.classList.remove("nav-hidden");
+        }
+
+        lastScroll = currentScroll;
+
+    }, { passive: true });
 
 });
 
