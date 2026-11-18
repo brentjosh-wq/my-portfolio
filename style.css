@@ -1331,12 +1331,11 @@ body {
     }
 }
 
-    /* Contact */
     .contact-container {
         grid-template-columns: 1fr 1.3fr;
     }
 
-    /* TABLET AND DESKTOP CONTACT LAYOUT */
+   
 @media screen and (min-width: 601px) {
 
     .contact-container {
@@ -1357,7 +1356,7 @@ body {
 
 }
 
-/* PHONE - KEEP VERTICAL LAYOUT */
+
 @media screen and (max-width: 600px) {
     .contact-container {
         display: grid;
