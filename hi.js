@@ -86,28 +86,77 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-const contactForm = document.getElementById("contactForm");
-const successPopup = document.getElementById("successPopup");
-const closePopup = document.getElementById("closePopup");
 
-contactForm.addEventListener("submit", function(event) {
+document.addEventListener("DOMContentLoaded", function () {
 
-    event.preventDefault();
+    const contactForm = document.getElementById("contactForm");
+    const successPopup = document.getElementById("successPopup");
+    const closePopup = document.getElementById("closePopup");
 
-   
-    successPopup.classList.add("active");
+    const sendBtn = contactForm.querySelector(".send-btn");
 
-    contactForm.reset();
+    // Initialize EmailJS
+    emailjs.init({
+        publicKey: "h3FXlu1H91xzcH6Hr"
+    });
 
-});
+    // Send message
+    contactForm.addEventListener("submit", function(event) {
 
+        event.preventDefault();
 
-closePopup.addEventListener("click", function() {
-    successPopup.classList.remove("active");
-});
+        sendBtn.disabled = true;
+        sendBtn.textContent = "Sending...";
 
-successPopup.addEventListener("click", function(event) {
-    if (event.target === successPopup) {
+        emailjs.sendForm(
+            "service_qljogc8",
+            "template_laleuce",
+            contactForm
+        )
+
+        .then(function(response) {
+
+            console.log("SUCCESS!", response.status);
+
+            // Reset form after successful sending
+            contactForm.reset();
+
+            // Show your existing popup animation
+            successPopup.classList.add("active");
+
+        })
+
+        .catch(function(error) {
+
+            console.error("EMAILJS ERROR:", error);
+
+            alert("Sorry! Your message could not be sent. Please try again.");
+
+        })
+
+        .finally(function() {
+
+            sendBtn.disabled = false;
+            sendBtn.textContent = "Send Message →";
+
+        });
+
+    });
+
+    // Close popup button
+    closePopup.addEventListener("click", function() {
         successPopup.classList.remove("active");
-    }
+    });
+
+    // Close popup when clicking outside
+    successPopup.addEventListener("click", function(event) {
+
+        if (event.target === successPopup) {
+            successPopup.classList.remove("active");
+        }
+
+    });
+
 });
+
+
