@@ -1070,7 +1070,7 @@ body {
         height: 65px;
     }
 
-        padding: 45px 5%;
+      
     }
 
     .skills-section .skills-container {
@@ -1161,7 +1161,7 @@ body {
         max-width: 350px;
         padding: 25px 18px;
     }
-}
+
 
 
 @media screen and (max-width: 400px) {
