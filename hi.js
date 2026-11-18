@@ -94,20 +94,18 @@ contactForm.addEventListener("submit", function(event) {
 
     event.preventDefault();
 
-    // Show popup
+   
     successPopup.classList.add("active");
 
-    // Clear form
     contactForm.reset();
 
 });
 
-// Close popup when clicking OK
+
 closePopup.addEventListener("click", function() {
     successPopup.classList.remove("active");
 });
 
-// Close popup when clicking outside the card
 successPopup.addEventListener("click", function(event) {
     if (event.target === successPopup) {
         successPopup.classList.remove("active");
